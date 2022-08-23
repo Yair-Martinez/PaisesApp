@@ -1,0 +1,9 @@
+<article class="pais">
+  <img [src]="pais.flags.png" loading="lazy" [alt]="'Bandera de ' + pais.name">
+  <div class="pais-texto">
+    <h1>{{ pais.name }}</h1>
+    <p><b>Population: </b>{{pais.population.toLocaleString()}}</p>
+    <p><b>Region: </b>{{pais.region}}</p>
+    <p><b>Capital: </b>{{pais.capital}}</p>
+  </div>
+</article>

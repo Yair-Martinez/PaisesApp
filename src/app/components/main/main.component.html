@@ -1,0 +1,27 @@
+<div class="main">
+  <div class="nav-buscador">
+    <form (input)="buscarPais()" [formGroup]="formBuscar" class="caja-texto">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" formControlName="buscador" id="buscador" placeholder="Search for a country...">
+    </form>
+
+    <form (change)="filtrarRegion()" [formGroup]="formFiltrar">
+      <select formControlName="filtro" id="filtro">
+        <option hidden disabled selected value> Filter by Region </option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+    </form>
+  </div>
+  <div class="paises" *ngIf="!isLoading; else loading">
+    <Pais *ngFor="let elem of paises" [pais]="elem"  [routerLink]="'/pais-detalles/' + elem.alpha3Code"></Pais>
+  </div>
+  <ng-template #loading>
+    <div class="spinner-container">
+      <mat-progress-spinner mode="indeterminate" [color]="spinnerColor" class="spinner"></mat-progress-spinner>
+    </div>
+  </ng-template>
+</div>

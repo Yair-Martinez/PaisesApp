@@ -1,0 +1,62 @@
+
+.navbar {
+  padding: 1rem;
+  background-color: var(--main);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  color: var(--text);
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+
+    >* {
+      margin: 0 1rem;
+    }
+
+    .switch {
+      background-color: var(--button);
+      border-radius: 2rem;
+      border: none;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      outline: none;
+      transition: all .3s ease;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        top: 0;
+        left: var(--btn-left);
+        right: var(--btn-right);
+        border-radius: 2rem;
+        box-shadow: 0 0 2px 2px rgba($color: black, $alpha: 0.2);
+        background-color: #F1F1F1;
+      }
+
+      span {
+        width: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+        display: block;
+        background: none;
+        color: var(--main);
+      }
+    }
+  }
+
+  @media screen and (max-width: 530px) {
+    nav {
+      padding: 0;
+
+      h1 {
+        font-size: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--secondary);
+  transition: all .25s ease;
+}
+
+.light-theme {
+  --main: white;
+  --secondary: rgb(250, 250, 250);
+  --text: black;
+  --button: #343D5B;
+  --btn-left: 0;
+  --btn-right: unset;
+}
+
+.dark-theme {
+  --main: rgb(24, 24, 24);
+  --secondary: rgb(48, 48, 48);
+  --text: white;
+  --button: orange;
+  --btn-left: unset;
+  --btn-right: 0;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

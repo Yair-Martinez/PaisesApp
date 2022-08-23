@@ -1,0 +1,24 @@
+<div class="pais-detalles">
+  <button type="button" (click)="goBack()" class="back-btn"><i class="fa-solid fa-arrow-left-long"> </i> Back</button>
+
+  <div class="container" *ngIf="show">
+    <img [src]="pais.flags.png" [alt]="'Bandera de ' + pais.name">
+    <section class="left-info">
+      <h1 class="titulo">{{pais.name}}</h1>
+      <ul>
+        <li><span>Native Name: </span>{{pais.nativeName}}</li>
+        <li><span>Population: </span>{{pais.population.toLocaleString()}}</li>
+        <li><span>Region: </span>{{pais.region}}</li>
+        <li><span>Sub Region: </span>{{pais.subregion}}</li>
+        <li><span>Capital: </span>{{pais.capital}}</li>
+      </ul>
+    </section>
+    <section class="right-info">
+      <ul>
+        <li><span>Top Level Domain: </span>{{pais.topLevelDomain}}</li>
+        <li><span>Currencies: </span>{{ curr }}</li>
+        <li><span>Languages: </span>{{ lang }}</li>
+      </ul>
+    </section>
+  </div>
+</div>
